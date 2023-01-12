@@ -1,2 +1,2 @@
-# useful-three.js-functions
-# nothing more to it
+# Useful three.js functions.
+# Only works if the mesh has a box geometry.
