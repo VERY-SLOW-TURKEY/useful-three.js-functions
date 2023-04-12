@@ -74,3 +74,14 @@ geometry:{parameters:{width: mesh.geometry.parameters.width / 2, height: 0, dept
 }
 return bottomMesh;
 }
+
+// moves a mesh forward in the direction it is pointing both horizontally and vertically
+
+function forward(mesh, amount) {
+const xChange = Math.cos(mesh.rotation.y) * amount;
+const zChange = Math.sin(mesh.rotation.y) * amount;
+const yChange = Math.sin(mesh.rotation.x) * amount;
+mesh.position.x += xChange;
+mesh.position.z += zChange;
+mesh.position.y += yChange;
+}
