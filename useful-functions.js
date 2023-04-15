@@ -86,3 +86,16 @@ mesh.position.x -= xChange;
 mesh.position.z -= zChange;
 mesh.position.y += yChange;
 }
+
+
+
+function pointToward(mesh1, mesh2) {
+var a = mesh1.position.x - mesh2.position.x;
+var o = mesh1.position.z - mesh2.position.z;
+const result = Math.atan(a / o);
+if (o < 0) {
+mesh1.rotation.y = result + Math.PI;
+} else {
+mesh1.rotation.y = result;
+}
+}
